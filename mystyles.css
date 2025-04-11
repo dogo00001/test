@@ -1,0 +1,94 @@
+/* Updated color palette */
+:root {
+    --bs-primary: #004876;
+    --bs-secondary: #c71748;
+    --bs-tertiary: #d7df23;
+    --bs-tertiary-dark: #01283f;
+    --bs-quaternary-1: #6e6e6e;
+    --bs-quaternary-2: #919191;
+    --bs-quaternary-3: #bebebe;
+    --bs-quaternary-4: #e6e6e6;
+  
+    --bs-blue: #004876;
+    --bs-indigo: #004876;
+    --bs-purple: #c71748;
+    --bs-pink: #c71748;
+    --bs-red: #c71748;
+    --bs-orange: #d7df23;
+    --bs-yellow: #d7df23;
+    --bs-green: #01283f;
+    --bs-teal: #01283f;
+    --bs-cyan: #004876;
+    --bs-black: #01283f;
+    --bs-white: #ffffff;
+    --bs-gray: #919191;
+    --bs-gray-dark: #6e6e6e;
+    --bs-gray-100: #e6e6e6;
+    --bs-gray-200: #e6e6e6;
+    --bs-gray-300: #bebebe;
+    --bs-gray-400: #bebebe;
+    --bs-gray-500: #919191;
+    --bs-gray-600: #919191;
+    --bs-gray-700: #6e6e6e;
+    --bs-gray-800: #6e6e6e;
+    --bs-gray-900: #01283f;
+  
+    --bs-primary-rgb: 0, 72, 118;
+    --bs-secondary-rgb: 199, 23, 72;
+    --bs-success-rgb: 1, 40, 63;
+    --bs-info-rgb: 0, 72, 118;
+    --bs-warning-rgb: 215, 223, 35;
+    --bs-danger-rgb: 199, 23, 72;
+    --bs-light-rgb: 230, 230, 230;
+    --bs-dark-rgb: 1, 40, 63;
+
+    --bs-body-color: #01283f;
+    --bs-body-bg: #ffffff;
+
+    --bs-border-color: #bebebe;
+    --bs-border-color-translucent: rgba(1, 40, 63, 0.175);
+    
+    --bs-link-color: #004876;
+    --bs-link-hover-color: #01283f;
+    --bs-code-color: #c71748;
+    --bs-highlight-bg: #d7df23;
+  }
+  
+  /* Updated UI element colors */
+  .form-control {
+    color: #01283f;
+    background-color: #ffffff;
+    border: 1px solid #bebebe;
+  }
+  .form-control:focus {
+    border-color: #004876;
+    box-shadow: 0 0 0 0.25rem rgba(0, 72, 118, 0.25);
+  }
+  
+  .btn-primary {
+    background-color: #004876;
+    border-color: #004876;
+  }
+  .btn-primary:hover {
+    background-color: #01283f;
+    border-color: #01283f;
+  }
+  
+  .text-muted {
+    color: #919191 !important;
+  }
+  
+  .table-striped > tbody > tr:nth-of-type(odd) > * {
+    background-color: #e6e6e6;
+  }
+  
+  .table-hover > tbody > tr:hover > * {
+    background-color: #bebebe;
+  }
+  
+  .alert-primary {
+    color: #004876;
+    background-color: #d7df23;
+    border-color: #004876;
+  }
+  
