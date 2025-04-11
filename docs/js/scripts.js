@@ -124,16 +124,16 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
- /* Age Gate */
- 
- function showAgeGate() {
+/* Age Gate */
+function showAgeGate() {
     const ageGate = document.getElementById("age-gate");
     console.log("Age Gate element found:", ageGate);  // Check if the element is correctly selected
     ageGate.style.display = "flex";
 
     document.getElementById("age-yes").addEventListener("click", () => {
-        console.log("Yes button clicked");
-        localStorage.setItem("age_verified", "true"); // Store confirmation
+        console.log("Yes button clicked");  // Debugging log
+        localStorage.setItem("age_verified", "true");
+        const ageGate = document.getElementById("age-gate");
         ageGate.style.display = "none";
     });
 
