@@ -125,9 +125,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
  /* Age Gate */
-
+ 
  function showAgeGate() {
     const ageGate = document.getElementById("age-gate");
+    console.log("Age Gate element found:", ageGate);  // Check if the element is correctly selected
     ageGate.style.display = "flex";
 
     document.getElementById("age-yes").addEventListener("click", () => {
@@ -143,7 +144,9 @@ document.addEventListener("DOMContentLoaded", function () {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
+    console.log("DOMContentLoaded triggered");
     if (localStorage.getItem("age_verified") !== "true") {
+        console.log("Age gate not verified yet, showing gate");
         showAgeGate();
     }
 });
