@@ -125,23 +125,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const ageGate = document.getElementById("age-gate");
     const ageYes = document.getElementById("age-yes");
     const ageNo = document.getElementById("age-no");
-
-    // Check localStorage
-    if (localStorage.getItem("ageVerified") === "true") {
-        ageGate.style.display = "none";
-    } else {
-        ageGate.style.display = "flex";
+  
+    // Show the gate if not verified
+    if (localStorage.getItem("ageVerified") !== "true") {
+      ageGate.classList.add("active");
     }
-
-    // Handle Yes
-    ageYes.addEventListener("click", function () {
-        localStorage.setItem("ageVerified", "true");
-        ageGate.style.display = "none";
+  
+    ageYes?.addEventListener("click", () => {
+      localStorage.setItem("ageVerified", "true");
+      ageGate.classList.remove("active");
     });
-
-    // Handle No
-    ageNo.addEventListener("click", function () {
-        window.location.href = "https://www.google.com";
+  
+    ageNo?.addEventListener("click", () => {
+      window.location.href = "https://www.google.com";
     });
 
 
