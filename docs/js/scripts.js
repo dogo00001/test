@@ -155,6 +155,6 @@ window.addEventListener("DOMContentLoaded", () => {
         console.log("Age gate verified");
         const ageGate = document.getElementById("age-gate");
         console.log("Age Gate element found:", ageGate); 
-        ageGate.style.display = "none"
+        ageGate.style.display = "none !important"
     }
 });

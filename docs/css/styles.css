@@ -12653,43 +12653,11 @@ html {
 }
 
 #age-gate {
-  background-color: #01283f; /* dark but brand-matching */
+  background-color: #01283f;
   color: #ffffff;
-}
-
-#age-gate h1 {
-  color: #d7df23;
-}
-
-#age-gate .btn-primary {
-  background-color: #c71748;
-  border-color: #c71748;
-}
-
-#age-gate .btn-primary:hover {
-  background-color: #8e1133;
-  border-color: #8e1133;
-}
-
-#age-gate .btn-outline-light {
-  color: #d7df23;
-  border-color: #d7df23;
-}
-
-#age-gate .btn-outline-light:hover {
-  background-color: #d7df23;
-  color: #01283f;
-}
-
-#age-gate {
   padding: 2rem;
   text-align: center;
   font-family: 'Segoe UI', sans-serif;
   border-radius: 0.5rem;
-}
-
-#age-gate h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
+  display: none; /* Add this line to keep it consistent with your inline style */
 }
