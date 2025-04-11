@@ -121,30 +121,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
     displayBlogPreviews(currentPage);
 
-});
-
-
-/* Age Gate */
-document.addEventListener("DOMContentLoaded", function () {
+    /* Age Gate */
     const ageGate = document.getElementById("age-gate");
     const ageYes = document.getElementById("age-yes");
     const ageNo = document.getElementById("age-no");
 
     // Check localStorage
     if (localStorage.getItem("ageVerified") === "true") {
-      ageGate.style.display = "none";
+        ageGate.style.display = "none";
     } else {
-      ageGate.style.display = "flex";
+        ageGate.style.display = "flex";
     }
 
     // Handle Yes
     ageYes.addEventListener("click", function () {
-      localStorage.setItem("ageVerified", "true");
-      ageGate.style.display = "none";
+        localStorage.setItem("ageVerified", "true");
+        ageGate.style.display = "none";
     });
 
     // Handle No
     ageNo.addEventListener("click", function () {
-      window.location.href = "https://www.google.com";
+        window.location.href = "https://www.google.com";
     });
-  });
+
+
+
+});
