@@ -151,4 +151,8 @@ window.addEventListener("DOMContentLoaded", () => {
         console.log("Age gate not verified yet, showing gate");
         showAgeGate();
     }
+    if (localStorage.getItem("age_verified") === "true") {
+        console.log("Age gate verified");
+        showAgeGate();
+    }
 });
