@@ -125,35 +125,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 /* Age Gate */
-function showAgeGate() {
+document.addEventListener("DOMContentLoaded", function () {
     const ageGate = document.getElementById("age-gate");
-    console.log("Age Gate element found:", ageGate);  // Debugging log
-    // ageGate.style.display = "flex";
+    const ageYes = document.getElementById("age-yes");
+    const ageNo = document.getElementById("age-no");
 
-    // Using event listeners to trigger action
-    document.getElementById("age-yes").addEventListener("click", () => {
-        console.log("Yes button clicked");
-        localStorage.setItem("age_verified", "true");
-        // Ensure age gate is hidden
-        ageGate.style.display = "none";
+    // Check localStorage
+    if (localStorage.getItem("ageVerified") === "true") {
+      ageGate.style.display = "none";
+    } else {
+      ageGate.style.display = "flex";
+    }
+
+    // Handle Yes
+    ageYes.addEventListener("click", function () {
+      localStorage.setItem("ageVerified", "true");
+      ageGate.style.display = "none";
     });
 
-    document.getElementById("age-no").addEventListener("click", () => {
-        console.log("No button clicked");
-        window.location.href = "https://www.google.com"; // Redirect underage visitors
+    // Handle No
+    ageNo.addEventListener("click", function () {
+      window.location.href = "https://www.google.com";
     });
-}
-
-window.addEventListener("DOMContentLoaded", () => {
-    console.log("DOMContentLoaded triggered");
-    if (localStorage.getItem("age_verified") !== "true") {
-        console.log("Age gate not verified yet, showing gate");
-        showAgeGate();
-    }
-    if (localStorage.getItem("age_verified") === "true") {
-        console.log("Age gate verified");
-        const ageGate = document.getElementById("age-gate");
-        console.log("Age Gate element found:", ageGate); 
-        ageGate.style.display = "none !important"
-    }
-});
+  });
