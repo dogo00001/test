@@ -134,7 +134,6 @@ function showAgeGate() {
     document.getElementById("age-yes").addEventListener("click", () => {
         console.log("Yes button clicked");
         localStorage.setItem("age_verified", "true");
-
         // Ensure age gate is hidden
         ageGate.style.display = "none";
     });
