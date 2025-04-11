@@ -127,13 +127,15 @@ document.addEventListener("DOMContentLoaded", function () {
 /* Age Gate */
 function showAgeGate() {
     const ageGate = document.getElementById("age-gate");
-    console.log("Age Gate element found:", ageGate);  // Check if the element is correctly selected
+    console.log("Age Gate element found:", ageGate);  // Debugging log
     ageGate.style.display = "flex";
 
+    // Using event listeners to trigger action
     document.getElementById("age-yes").addEventListener("click", () => {
-        console.log("Yes button clicked");  // Debugging log
+        console.log("Yes button clicked");
         localStorage.setItem("age_verified", "true");
-        const ageGate = document.getElementById("age-gate");
+
+        // Ensure age gate is hidden
         ageGate.style.display = "none";
     });
 
