@@ -124,24 +124,15 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
- /* Cookie Section */
+ /* Age Gate */
 
-function setCookie(name, value, days) {
-    const expires = new Date(Date.now() + days * 24 * 60 * 60 * 1000).toUTCString();
-    document.cookie = `${name}=${value}; expires=${expires}; path=/; SameSite=Strict`;
-}
-
-function getCookie(name) {
-    return document.cookie.split("; ").find(row => row.startsWith(name + "="))?.split("=")[1];
-}
-
-function showAgeGate() {
+ function showAgeGate() {
     const ageGate = document.getElementById("age-gate");
     ageGate.style.display = "flex";
 
     document.getElementById("age-yes").addEventListener("click", () => {
         console.log("Yes button clicked");
-        setCookie("age_verified", "true", 30); // Valid for 30 days
+        localStorage.setItem("age_verified", "true"); // Store confirmation
         ageGate.style.display = "none";
     });
 
@@ -152,7 +143,7 @@ function showAgeGate() {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-    if (getCookie("age_verified") !== "true") {
+    if (localStorage.getItem("age_verified") !== "true") {
         showAgeGate();
     }
 });
