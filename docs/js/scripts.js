@@ -122,3 +122,37 @@ document.addEventListener("DOMContentLoaded", function () {
     displayBlogPreviews(currentPage);
 
 });
+
+
+ /* Cookie Section */
+
+function setCookie(name, value, days) {
+    const expires = new Date(Date.now() + days * 24 * 60 * 60 * 1000).toUTCString();
+    document.cookie = `${name}=${value}; expires=${expires}; path=/; SameSite=Strict`;
+}
+
+function getCookie(name) {
+    return document.cookie.split("; ").find(row => row.startsWith(name + "="))?.split("=")[1];
+}
+
+function showAgeGate() {
+    const ageGate = document.getElementById("age-gate");
+    ageGate.style.display = "flex";
+
+    document.getElementById("age-yes").addEventListener("click", () => {
+        console.log("Yes button clicked");
+        setCookie("age_verified", "true", 30); // Valid for 30 days
+        ageGate.style.display = "none";
+    });
+
+    document.getElementById("age-no").addEventListener("click", () => {
+        console.log("No button clicked");
+        window.location.href = "https://www.google.com"; // Redirect underage visitors
+    });
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+    if (getCookie("age_verified") !== "true") {
+        showAgeGate();
+    }
+});

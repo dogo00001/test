@@ -15,7 +15,58 @@
     <link href="./css/styles.css" rel="stylesheet" />
 </head>
 
+<!-- Age Gate -->
+<div id="age-gate"
+    class="position-fixed top-0 start-0 w-100 h-100 d-flex flex-column align-items-center justify-content-center text-center px-4"
+    style="z-index: 10000; background-color: var(--bs-tertiary-dark); color: var(--bs-white);">
+
+    <h1 class="fw-bold mb-3 text-tertiary" style="color: var(--bs-quaternary-4);">
+        Are you old enough to wine with us?
+    </h1>
+    <p class="text-muted mb-4">
+        You must be 18 or older to enter VINdredi.
+    </p>
+
+    <div class="d-flex gap-3 flex-wrap justify-content-center">
+        <button id="age-yes" class="btn px-4 py-2 fw-semibold"
+            style="color: var(--bs-quaternary-4); border-color: var(--bs-tertiary);">
+            Yes
+        </button>
+        <button id="age-no" class="btn btn-primary px-4 py-2 fw-semibold">
+            No
+        </button>
+    </div>
+</div>
+
 <body class="d-flex flex-column h-100">
+
+
+    <!-- Cookie Consent by TermsFeed https://www.TermsFeed.com -->
+    <script type="text/javascript" src="https://www.termsfeed.com/public/cookie-consent/4.2.0/cookie-consent.js"
+        charset="UTF-8"></script>
+    <script type="text/javascript" charset="UTF-8">
+        document.addEventListener('DOMContentLoaded', function () {
+            cookieconsent.run({ "notice_banner_type": "interstitial", "consent_type": "express", "palette": "dark", "language": "en", "page_load_consent_levels": ["strictly-necessary"], "notice_banner_reject_button_hide": false, "preferences_center_close_button_hide": false, "page_refresh_confirmation_buttons": false, "website_name": "VINdredi", "website_privacy_policy_url": "https://example.com/privacy-policy" });
+        });
+    </script>
+
+    <!-- Core theme JS-->
+    <script src="./js/scripts.js" type="text/plain" data-cookie-consent="functionality"></script>
+
+    <noscript>Free cookie consent management tool by <a href="https://www.termsfeed.com/"
+            rel="nofollow">TermsFeed</a></noscript>
+    <!-- End Cookie Consent by TermsFeed https://www.TermsFeed.com -->
+
+
+
+
+
+    <!-- Below is the link that users can use to open Preferences Center to change their preferences. Do not modify the ID parameter. Place it where appropriate, style it as needed. -->
+
+    <a href="#" id="open_preferences_center">Update cookies preferences</a>
+
+
+
     <main class="flex-shrink-0">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -61,7 +112,7 @@
                         </div>
                     </div>
                     <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5"
-                            src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." /></div>
+                            src="assets/images/posterqr.png" alt="..." /></div>
                 </div>
             </div>
         </header>
@@ -70,8 +121,8 @@
         <section class="py-5" id="about">
             <div class="container px-5 my-5">
                 <div class="row gx-5 align-items-center">
-                    <div class="col-lg-6"><img class="img-fluid rounded mb-5 mb-lg-0"
-                            src="https://dummyimage.com/600x400/343a40/6c757d" alt="..." /></div>
+                    <div class="col-lg-6"><img class="img-fluid rounded mb-5 mb-lg-0" src="assets/images/profile.jpg"
+                            alt="..." /></div>
                     <div class="col-lg-6">
                         <h2 class="fw-bolder">About</h2>
                         <p class="lead fw-normal text-muted mb-0">Lorem ipsum dolor sit amet consectetur adipisicing
@@ -202,15 +253,15 @@
                     <span class="text-white mx-1">&middot;</span>
                     <a class="link-light small" href="#!">Terms</a>
                     <span class="text-white mx-1">&middot;</span>
-                    <a class="link-light small" href="#!">Contact</a>
+                    <a class="link-light small" href="index.html#contactcard">Contact</a>
                 </div>
             </div>
         </div>
     </footer>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="./js/scripts.js"></script>
+    <!-- Core theme JS>
+    <script src="./js/scripts.js" type="text/plain" data-cookie-consent="functionality"></script-->
 </body>
 
 </html>
